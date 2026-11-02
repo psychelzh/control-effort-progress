@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="控制投入研究公开进度：核心流程、启动条件、阶段任务和更新记录。">
+  <meta name="color-scheme" content="light">
+  <title>控制投入研究 · 项目进度</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header">
+    <a class="brand" href="#overview" aria-label="控制投入研究首页"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>控制投入研究<small>RESEARCH PROGRESS</small></span></a>
+    <nav aria-label="主导航"><a href="#workflow">研究流程</a><a href="#tasks">任务进度</a><a href="#updates">更新记录</a></nav>
+    <a class="header-link repo-link" href="https://github.com/psychelzh/control-effort-progress" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main">
+    <div id="load-error" class="error-box" role="alert" hidden>进度数据暂时无法加载。请刷新重试，或<a href="./data/progress.json">查看原始进度数据</a>。</div>
+    <div id="loading" class="loading" role="status">正在加载研究进度…</div>
+    <div id="content" hidden>
+      <section class="hero section" id="overview" aria-labelledby="hero-title">
+        <div class="hero-main">
+          <p class="eyebrow"><span class="live-dot"></span><span id="program"></span></p>
+          <h1 id="hero-title">把研究的每一步，<br><span>变成可见的进展。</span></h1>
+          <p class="hero-subtitle" id="project-subtitle"></p>
+          <p class="hero-description" id="project-summary"></p>
+          <div class="hero-actions"><a class="button primary" href="#tasks">查看当前任务 <span aria-hidden="true">↓</span></a><a class="text-link" href="#workflow">浏览完整流程 <span aria-hidden="true">↗</span></a></div>
+          <p class="snapshot" id="snapshot"></p>
+        </div>
+        <aside class="focus-card" aria-labelledby="focus-title">
+          <div class="focus-top"><span class="eyebrow">当前焦点</span><span class="badge amber" id="focus-label">实施前</span></div>
+          <h2 id="focus-title">先把启动条件落实。</h2>
+          <p id="status-note"></p>
+          <div class="focus-route"><span>方案设计</span><b aria-hidden="true">→</b><strong>启动准备</strong><b aria-hidden="true">→</b><span>正式研究</span></div>
+          <a href="#gates" class="focus-bottom"><span id="gate-summary"></span><span aria-hidden="true">↗</span></a>
+        </aside>
+      </section>
+      <section class="metrics section" aria-label="项目概况">
+        <div><span class="metric-label">当前阶段</span><strong id="metric-phase"></strong><small>依据现有工作材料</small></div>
+        <div><span class="metric-label">研究设计</span><strong>3 <em>项独立样本实验</em></strong><small>任务选择 / 控制准备 / 反馈学习</small></div>
+        <div><span class="metric-label">已完成任务</span><strong id="metric-tasks"></strong><small>按任务计数，不代表研究完成比例</small></div>
+        <div><span class="metric-label">拟定实施周期</span><strong id="metric-period"></strong><small id="metric-period-note"></small></div>
+      </section>
+      <section class="section" id="workflow" aria-labelledby="workflow-title">
+        <div class="section-heading"><div><p class="eyebrow">THE RESEARCH PATH</p><h2 id="workflow-title">一条主线，七个阶段。</h2></div><p>建立现象 → 定位环节 → 追溯来源<br><span>点击阶段，查看对应任务；各实验可按条件并行推进。</span></p></div>
+        <div class="workflow" id="stage-grid"></div>
+        <p class="section-footnote">三个正式实验使用独立样本；预测试参与者不进入正式样本。流程编号表示研究结构，实际启动受各自前置条件约束。</p>
+      </section>
+      <section class="section gates-section" id="gates" aria-labelledby="gates-title">
+        <div class="section-heading"><div><p class="eyebrow">BEFORE WE BEGIN</p><h2 id="gates-title">正式筛查的启动条件</h2></div><span class="section-tag" id="gate-count"></span></div>
+        <div class="gates-grid" id="gate-grid"></div>
+        <p class="section-footnote">条件落实前可推进程序开发、模拟与团队空跑。涉及参与者的活动须在适用伦理审批和风险流程落实后开展。</p>
+      </section>
+      <section class="section tasks-section" id="tasks" aria-labelledby="tasks-title">
+        <div class="section-heading"><div><p class="eyebrow">WORK IN PROGRESS</p><h2 id="tasks-title">从下一件事开始。</h2></div><a class="text-link edit-link" target="_blank" rel="noopener noreferrer" href="https://github.com/psychelzh/control-effort-progress/edit/main/site/data/progress.json">维护进度 <span aria-hidden="true">↗</span></a></div>
+        <div class="task-toolbar">
+          <div class="filters" role="group" aria-label="按任务状态筛选">
+            <button type="button" class="filter active" data-status="all" aria-pressed="true">全部 <span></span></button>
+            <button type="button" class="filter" data-status="blocked" aria-pressed="false">待落实 <span></span></button>
+            <button type="button" class="filter" data-status="unverified" aria-pressed="false">待核实 <span></span></button>
+            <button type="button" class="filter" data-status="doing" aria-pressed="false">进行中 <span></span></button>
+            <button type="button" class="filter" data-status="todo" aria-pressed="false">待开始 <span></span></button>
+            <button type="button" class="filter" data-status="done" aria-pressed="false">已完成 <span></span></button>
+          </div>
+          <div class="task-controls"><label class="sr-only" for="stage-select">按阶段筛选</label><select id="stage-select"><option value="all">全部阶段</option></select><label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">搜索任务</span><input type="search" id="task-search" placeholder="搜索任务或责任角色" autocomplete="off"></label></div>
+        </div>
+        <div class="task-meta"><p id="task-result" role="status" aria-live="polite"></p><button class="reset-link" id="reset-filters" type="button" hidden>清除筛选</button></div>
+        <div class="task-list" id="task-list"></div>
+        <div class="empty-state" id="empty-state" hidden><h3>没有匹配的任务</h3><p>调整关键词或筛选条件，继续查看研究进度。</p><button type="button" class="button secondary" id="empty-reset">查看全部任务</button></div>
+        <p class="section-footnote">展开任务可查看下一步、完成标准、前置任务与材料依据。责任角色来自计划分工，具体人员待实际落实。</p>
+      </section>
+      <section class="section" aria-labelledby="milestones-title">
+        <div class="section-heading"><div><p class="eyebrow">PLANNED MILESTONES</p><h2 id="milestones-title">把目光放远一点。</h2></div><span class="section-tag neutral">拟定安排 · 非已完成进度</span></div>
+        <div id="milestone-grid" class="milestones"></div>
+      </section>
+      <section class="section updates-section" id="updates" aria-labelledby="updates-title">
+        <div><p class="eyebrow">PROJECT LOG</p><h2 id="updates-title">每次推进，都有记录。</h2><p class="muted">记录实际变化，也保留尚待确认的部分。</p><button type="button" id="export-data" class="button secondary">下载进度快照 <span aria-hidden="true">↓</span></button></div>
+        <ol id="update-list" class="update-list"></ol>
+      </section>
+      <section class="section maintain-section" aria-labelledby="maintain-title"><div><p class="eyebrow">KEEP IT CURRENT</p><h2 id="maintain-title">让进度持续更新。</h2><p>维护者在 GitHub 更新任务状态、材料核实日期与更新记录，提交后页面自动部署。访客可以浏览、筛选和下载当前快照。</p></div><a class="button primary edit-link" target="_blank" rel="noopener noreferrer" href="https://github.com/psychelzh/control-effort-progress/edit/main/site/data/progress.json">在 GitHub 更新 <span aria-hidden="true">↗</span></a></section>
+      <details class="source-note section"><summary>进度口径与材料依据</summary><p>页面仅展示研究流程和任务级进度。已完成表示该项交付物有材料支持；待核实表示未见足够的执行记录，不自动推定为未做。待落实表示启动条件尚未满足。任务计数不用于估计研究完成百分比。</p><p>核实日期表示材料覆盖范围；页面整理日期不表示所有事项均在当日重新核实。申报、立项、伦理和正式采集等状态须按实际凭据更新。</p><ul id="source-list"></ul><p>本页不提供申请书原件、量表、个体筛查或参与者信息。</p></details>
+    </div>
+    <noscript><p class="error-box">请启用 JavaScript 查看交互式进度。也可直接查看<a href="./data/progress.json">进度数据</a>。</p></noscript>
+  </main>
+  <footer class="site-footer"><span>控制投入研究 <span aria-hidden="true">/</span> 公开进度</span><div><a href="./data/progress.json">进度数据</a><a class="repo-link" href="https://github.com/psychelzh/control-effort-progress" target="_blank" rel="noopener noreferrer">源码与维护 ↗</a><a href="#overview">回到顶部 ↑</a></div></footer>
+</body>
+</html>

@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "project": {
+    "name": "控制投入研究",
+    "subtitle": "大学生亚阈值抑郁 · 控制效能的估计与利用",
+    "program": "2027 四川省自然科学基金申报项目",
+    "period": "2027—2028",
+    "periodNote": "申请书拟定周期，以实际立项安排为准",
+    "phase": "实施前准备",
+    "focusTitle": "先把启动条件落实。",
+    "focusLabel": "实施前",
+    "focusSteps": [
+      { "label": "方案设计", "current": false },
+      { "label": "启动准备", "current": true },
+      { "label": "正式研究", "current": false }
+    ],
+    "summary": "从任务选择，到控制准备，再到反馈学习。用三个独立样本实验，逐步检验控制效能的估计与利用。",
+    "updatedAt": "2026-11-02",
+    "evidenceAsOf": "2026-10-25",
+    "statusNote": "当前进度依据现有工作材料整理；申报提交及立项结果尚未核实。正式筛查尚未启动，未核实的执行事项保留为待核实。",
+    "repository": "https://github.com/psychelzh/control-effort-progress"
+  },
+  "sources": [
+    { "id": "proposal", "label": "项目工作稿", "note": "三项实验设计、拟定周期与分析安排；原件保留在本地。" },
+    { "id": "launch", "label": "实验一启动计划", "note": "程序、内部测试、预测试、冻结与正式采集的顺序；原件保留在本地。" },
+    { "id": "screening", "label": "筛查与分组讨论稿", "note": "2026-10-25：专业人员、工具、分组细则及伦理条件待落实。" },
+    { "id": "tools", "label": "筛查工具核查记录", "note": "2026-10-25：基础工具文件已核对，访谈方案与相关许可未落实。" },
+    { "id": "review", "label": "方案复核记录", "note": "直接预测试、功效及模型恢复结果仍需真实材料支撑。" }
+  ],
+  "stages": [
+    { "id": "prepare", "number": "01", "name": "方案与启动准备", "description": "明确研究路线，落实伦理、专业支持与操作材料。", "exit": "启动条件经核实，方案与职责可执行。" },
+    { "id": "pilot", "number": "02", "name": "任务与预测试", "description": "先开发与空跑，再在获批范围内预测试、模拟并冻结。", "exit": "任务、样本量、质控与分析方案冻结并预注册。" },
+    { "id": "screen", "number": "03", "name": "筛查与分组", "description": "初筛、专业访谈、分组复核、实验当天确认状态。", "exit": "形成获批、可复核的招募与分组流程。" },
+    { "id": "exp1", "number": "04", "name": "实验一 · 任务选择", "description": "明确告知奖赏与效能，观察是否选择较费力的任务。", "exit": "完成独立行为样本、质量检查和数据锁定。" },
+    { "id": "exp2", "number": "05", "name": "实验二 · 控制准备", "description": "固定执行任务，用脑电观察信息评价与任务前准备。", "exit": "完成独立脑电样本及预定质量检查。" },
+    { "id": "exp3", "number": "06", "name": "实验三 · 反馈学习", "description": "通过反馈形成效能判断，检验判断如何用于后续准备。", "exit": "完成独立脑电样本及学习模型验证。" },
+    { "id": "outputs", "number": "07", "name": "分析与成果", "description": "按冻结方案分析，整合三项实验，交付可复核成果。", "exit": "形成论文、任务程序、分析流程与项目报告。" }
+  ],
+  "gates": [
+    { "id": "professional", "title": "落实专业评估支持", "description": "明确访谈复核、疑难分组与风险处置的专业人员和职责。", "taskId": "professional" },
+    { "id": "license", "title": "确认工具与使用许可", "description": "结合实际合作条件，核实访谈工具版本、许可、培训及适配范围。", "taskId": "license" },
+    { "id": "ethics", "title": "完成伦理与风险流程", "description": "确认审批状态、知情同意、数据权限和转介安排。", "taskId": "ethics" },
+    { "id": "sop", "title": "完成分组操作规程复核", "description": "将讨论稿转为经专业审核的一致操作规程，再启动正式筛查。", "taskId": "screen-sop" }
+  ],
+  "tasks": [
+    { "id": "design", "stage": "prepare", "title": "完成三项实验的方案设计", "status": "done", "priority": "normal", "role": "项目负责人", "next": "实施前继续核对任务、指标与分析的一致性。", "acceptance": "形成三项递进实验及其主要比较的工作稿。", "evidence": "工作稿与启动计划已有完整研究路线；完成范围为方案设计。", "sources": ["proposal", "launch"] },
+    { "id": "launch-plan", "stage": "prepare", "title": "整理实验一启动路线与分工", "status": "done", "priority": "normal", "role": "项目负责人", "next": "确认实际人员和每周执行安排。", "acceptance": "形成开发、预测试、冻结、采集与分析的阶段计划。", "evidence": "已形成实验一启动与学生任务计划；不代表实际分工已落实。", "sources": ["launch"] },
+    { "id": "screen-draft", "stage": "prepare", "title": "形成筛查与分组讨论稿", "status": "done", "priority": "normal", "role": "项目负责人", "next": "交由评估专业人员复核并纳入伦理材料。", "acceptance": "形成可供专业审核的流程和分组记录草稿。", "evidence": "2026-10-25讨论稿及配套分组记录草稿已形成。", "sources": ["screening", "tools"] },
+    { "id": "base-tools", "stage": "prepare", "title": "核对基础筛查工具文件", "status": "done", "priority": "normal", "role": "研究团队", "next": "保留原版文件，继续核实访谈工具与辅助工具许可。", "acceptance": "核对基础量表的官方中文文件与说明。", "evidence": "工具记录确认基础量表文件已取得并核对；不等于完整工具包已获准实施。", "sources": ["tools"] },
+    { "id": "submission", "stage": "prepare", "title": "核实申报提交与立项状态", "status": "unverified", "priority": "high", "role": "项目负责人", "next": "依据科研管理系统或正式通知更新状态。", "acceptance": "记录实际提交或立项结果及核实日期。", "evidence": "现有工作材料不足以确认最终提交和立项结果。", "sources": ["proposal", "review"] },
+    { "id": "professional", "stage": "prepare", "title": "落实访谈与风险复核专业人员", "status": "blocked", "priority": "high", "role": "项目负责人", "next": "确认可投入的专业支持、职责与工时。", "acceptance": "访谈、复核、风险处置和转介的责任明确。", "evidence": "2026-10-25工具记录明确：专业评估合作尚未落实。", "sources": ["screening", "tools"] },
+    { "id": "license", "stage": "prepare", "title": "确认访谈工具、许可与培训", "status": "blocked", "priority": "high", "role": "项目负责人 / 专业人员", "next": "先核实合作人员实际使用的工具，再确定许可和培训路径。", "acceptance": "明确版本、来源、覆盖范围、许可条件和人员培训。", "evidence": "具体访谈工具与许可待落实；辅助压力工具许可也未确认。", "sources": ["tools"] },
+    { "id": "ethics", "stage": "prepare", "title": "核实伦理审批并落实风险流程", "status": "blocked", "priority": "high", "role": "项目负责人", "next": "核查审批记录，完善知情同意、数据权限及转介安排。", "acceptance": "取得适用审批并落实现场可执行的风险流程。", "evidence": "现有材料未提供已获批凭据，启动计划要求落实后再开展人体研究。", "sources": ["launch", "screening"] },
+    { "id": "screen-sop", "stage": "prepare", "title": "完成分组操作规程的专业审核", "status": "blocked", "priority": "high", "role": "专业人员 / 项目负责人", "dependsOn": ["professional", "license"], "next": "统一症状确认、排除、状态变化与疑难分组的处理。", "acceptance": "形成经专业复核、与伦理方案一致的操作规程。", "evidence": "当前为讨论稿，专业人员、工具与判定细则尚未确认。", "sources": ["screening"] },
+    { "id": "program", "stage": "pilot", "title": "开发任务程序与数据字典", "status": "unverified", "priority": "high", "role": "研究生 / 任务开发人员", "next": "核查是否已有可运行程序、版本记录与字段说明。", "acceptance": "完整任务可运行，数据结构与协议一致。", "evidence": "启动计划列有开发清单，未见已完成程序的验证记录。", "sources": ["launch"] },
+    { "id": "dry-run", "stage": "pilot", "title": "完成随机化、计时与数据写入空跑", "status": "unverified", "priority": "normal", "role": "任务开发人员 / 研究助理", "dependsOn": ["program"], "next": "核查测试记录并补齐关键功能的复现检查。", "acceptance": "关键字段可追溯，随机化、奖励与异常退出通过检查。", "evidence": "现有材料给出测试要求，未提供完成记录。", "sources": ["launch"] },
+    { "id": "pilot-study", "stage": "pilot", "title": "开展独立方法预测试", "status": "todo", "priority": "normal", "role": "研究团队", "dependsOn": ["professional", "license", "ethics", "screen-sop", "dry-run"], "next": "启动条件齐备后，按获批范围校准理解、时长与数据质量。", "acceptance": "形成预测试报告；参与者不进入正式样本。", "evidence": "复核记录指出直接预测试仍需实际完成。", "sources": ["proposal", "launch", "review"] },
+    { "id": "simulation", "stage": "pilot", "title": "完成功效与模型恢复验证", "status": "todo", "priority": "high", "role": "项目负责人 / 分析人员", "next": "按拟定任务参数验证主要检验、模型与参数的可区分性。", "acceptance": "形成可复核的模拟脚本、结果与参数决策记录。", "evidence": "工作稿与复核记录均将功效及恢复验证列为待完成。", "sources": ["proposal", "review"] },
+    { "id": "freeze", "stage": "pilot", "title": "冻结任务、质控与分析方案并预注册", "status": "todo", "priority": "normal", "role": "项目负责人", "dependsOn": ["pilot-study", "simulation"], "next": "依据预测试和模拟固定最终参数与样本量。", "acceptance": "预注册与冻结版本一致，后续变更留痕。", "evidence": "启动计划中安排在预测试与模拟之后。", "sources": ["launch", "proposal"] },
+    { "id": "screen-run", "stage": "screen", "title": "试运行筛查、访谈和分组流程", "status": "todo", "priority": "normal", "role": "专业人员 / 研究团队", "dependsOn": ["professional", "license", "ethics", "screen-sop"], "next": "在获批范围内检查工时、分组一致性与候选转化。", "acceptance": "形成去标识化流程统计与问题修订记录。", "evidence": "2026-10-25工具记录确认尚未开展参与者筛查。", "sources": ["screening", "tools"] },
+    { "id": "recruit", "stage": "screen", "title": "建立正式招募与预约流程", "status": "todo", "priority": "normal", "role": "研究团队", "dependsOn": ["screen-run", "freeze"], "next": "按真实转化率分批安排；联系方式与研究数据分开保存。", "acceptance": "候选、访谈、邀请、到场与有效数据的内部流程可追溯。", "evidence": "启动计划已列流程要求，正式筛查尚未启动。", "sources": ["launch", "tools"] },
+    { "id": "exp1-collect", "stage": "exp1", "title": "完成任务选择实验的独立样本采集", "status": "todo", "priority": "normal", "role": "研究团队", "dependsOn": ["recruit"], "next": "按冻结版本执行行为任务并开展盲态质量检查。", "acceptance": "满足冻结的有效样本与质量要求，保留排除记录。", "evidence": "目前为拟定研究阶段，未提供正式采集完成记录。", "sources": ["proposal", "launch"] },
+    { "id": "exp1-lock", "stage": "exp1", "title": "锁定行为数据并完成预定分析", "status": "todo", "priority": "normal", "role": "分析人员", "dependsOn": ["exp1-collect"], "next": "依照预注册完成操纵检查、主要模型与敏感性分析。", "acceptance": "形成锁定数据版本、分析日志与可复核结果。", "evidence": "分析任务已列入启动计划。", "sources": ["launch"] },
+    { "id": "eeg-check", "stage": "exp2", "title": "验证脑电设备、触发与采集规范", "status": "unverified", "priority": "normal", "role": "脑电技术人员", "next": "核查设备与触发测试记录，统一采集及预处理规范。", "acceptance": "两项脑电实验所用设备完成相应技术验证。", "evidence": "工作稿给出核验要求，未提供实际完成记录。", "sources": ["proposal"] },
+    { "id": "exp2-collect", "stage": "exp2", "title": "采集明确效能条件下的脑电数据", "status": "todo", "priority": "normal", "role": "脑电技术人员 / 研究团队", "dependsOn": ["recruit", "eeg-check"], "next": "使用独立样本记录线索评价与任务前准备。", "acceptance": "满足冻结的样本、试次保留与脑电质量标准。", "evidence": "属于拟定实施安排，未提供正式采集记录。", "sources": ["proposal"] },
+    { "id": "exp3-collect", "stage": "exp3", "title": "采集反馈学习条件下的脑电数据", "status": "todo", "priority": "normal", "role": "脑电技术人员 / 研究团队", "dependsOn": ["recruit", "eeg-check", "simulation"], "next": "使用独立样本测量反馈学习、主观判断与后续准备。", "acceptance": "完成冻结方案规定的有效数据与预处理。", "evidence": "属于拟定实施安排，未提供正式采集记录。", "sources": ["proposal"] },
+    { "id": "learning-model", "stage": "exp3", "title": "验证并拟合效能学习与利用模型", "status": "todo", "priority": "normal", "role": "分析人员", "dependsOn": ["exp3-collect", "simulation"], "next": "按预定模型检验判断差异能否解释后续控制。", "acceptance": "保留模型比较、恢复检查、不确定性与不能区分的情形。", "evidence": "当前为方案；尚无实际模型验证和正式数据分析结果。", "sources": ["proposal", "review"] },
+    { "id": "integrate", "stage": "outputs", "title": "整合三个实验的证据与稳健性分析", "status": "todo", "priority": "normal", "role": "项目负责人 / 分析人员", "dependsOn": ["exp1-lock", "exp2-collect", "learning-model"], "next": "结合选择、准备与学习结果，报告证据范围和不确定性。", "acceptance": "形成可复核的分析报告、图表和结论边界。", "evidence": "工作稿中的拟定成果阶段。", "sources": ["proposal"] },
+    { "id": "deliver", "stage": "outputs", "title": "交付论文、任务程序、分析流程与报告", "status": "todo", "priority": "normal", "role": "项目负责人 / 研究团队", "dependsOn": ["integrate"], "next": "依据实际结果整理成果与项目报告。", "acceptance": "交付物有明确版本、复现说明和实际完成记录。", "evidence": "当前仅为拟定产出目标，不表示已发表或已验收。", "sources": ["proposal"] }
+  ],
+  "milestones": [
+    { "period": "2027 上半年", "title": "准备与研究启动", "description": "伦理、人员、技术流程、预测试和方案冻结，条件齐备后启动正式研究。" },
+    { "period": "2027 下半年", "title": "行为实验与脑电采集", "description": "完成行为实验，推进两项脑电实验与阶段质量检查。" },
+    { "period": "2028 上半年", "title": "采集收尾与分实验分析", "description": "完成有效数据、数据锁定及主要分析，形成阶段报告。" },
+    { "period": "2028 下半年", "title": "证据整合与成果交付", "description": "完成稳健性分析、论文、任务与分析流程及项目报告。" }
+  ],
+  "updates": [
+    { "date": "2026-11-02", "type": "页面", "title": "建立公开进度页", "description": "依据本地材料整理核心流程和任务；仅发布精简进度，未核实的执行事项保留为待核实。" },
+    { "date": "2026-10-25", "type": "准备", "title": "整理筛查与工具准备材料", "description": "形成分组讨论稿和工具核查记录；专业支持、访谈方案与许可仍待落实，正式筛查尚未开始。" },
+    { "date": "2026-10-19", "type": "方案", "title": "补充实验一的设计考虑", "description": "启动计划补充成功预期与元认知的区分；未替换现有正式研究主线。" }
+  ]
+}
